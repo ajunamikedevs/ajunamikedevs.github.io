@@ -139,7 +139,7 @@
       text-decoration: underline; 
     }
 
-    /* Policy Modal */
+    /* Compliance Modals */
     .modal-overlay {
       display: none;
       position: fixed;
@@ -193,7 +193,7 @@
   <div class="card">
     <span class="badge">Founding Tier</span>
     <h1>A&M Content Engine</h1>
-    <p class="description">Automated multi-platform distribution from your long-form video or podcast episodes.</p>
+    <p class="description">AI-powered ingestion and programmatic content repurposing pipeline for video and podcast creators.</p>
 
     <div class="price-box">
       <span class="price">$49</span>
@@ -203,26 +203,25 @@
     <ul class="features">
       <li>
         <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-        4 long-form episodes processed per month
+        Automated ingestion of up to 4 episodes / month
       </li>
       <li>
         <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-        20 multi-platform assets (LinkedIn, X, Newsletter, Hooks)
+        20 standardized digital assets (LinkedIn, X, Newsletter, Hooks)
       </li>
       <li>
         <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-        Under 2-hour automated fulfillment to your inbox
+        Automated pipeline processing & direct inbox delivery
       </li>
       <li>
         <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-        Locked-in founding creator rate
+        Locked-in founding creator license
       </li>
     </ul>
 
     <button id="checkout-button" class="btn">Subscribe to Founding Tier</button>
     <p class="footer-note">Secure recurring billing powered by our authorized Merchant of Record</p>
 
-    <!-- Required compliance links -->
     <div class="legal-links">
       <a onclick="openModal('terms')">Terms</a> • 
       <a onclick="openModal('privacy')">Privacy</a> • 
@@ -243,31 +242,30 @@
   </div>
 
   <script>
-    // Placeholder Dodo Payments Checkout link
-    // Replace this URL once you generate your product payment link in the Dodo dashboard
+    // Dodo Payments Payment Link URL (Set once product link is generated in Dodo dashboard)
     const DODO_CHECKOUT_URL = ""; 
 
     document.getElementById('checkout-button').addEventListener('click', function () {
       if (DODO_CHECKOUT_URL && DODO_CHECKOUT_URL.trim() !== "") {
         window.location.href = DODO_CHECKOUT_URL;
       } else {
-        alert("Founding spots are currently being provisioned. To lock in your $49/mo rate immediately, please contact us at ajuna.n.michael@gmail.com.");
+        alert("Founding creator accounts are currently being provisioned. To lock in your $49/mo license immediately, contact ajuna.n.michael@gmail.com.");
       }
     });
 
-    // Legal Modals Data
+    // Legal Policies Data (Pre-configured for Dodo MoR Compliance)
     const policies = {
       terms: {
         title: "Terms of Service",
-        content: "<p><strong>1. Service Overview:</strong> A&M Content Engine provides automated digital content repurposing services. The Founding Tier includes processing of up to four (4) episodes per monthly billing cycle into 20 multi-platform editorial assets.</p><br><p><strong>2. Billing:</strong> Subscriptions are billed at $49.00 USD on a recurring monthly schedule. All transactions, sales tax calculations, and currency conversions are handled securely by our authorized Merchant of Record.</p><br><p><strong>3. Cancellation:</strong> You can cancel your subscription at any time with zero cancellation penalties via the customer billing link in your receipt or by contacting support at ajuna.n.michael@gmail.com.</p>"
+        content: "<p><strong>1. Product Overview:</strong> A&M Content Engine is a digital software and automation pipeline that programmatically ingests long-form audiovisual media and generates multi-platform editorial assets. The Founding Tier grants license access to process up to four (4) source episodes per monthly billing cycle into 20 standardized digital deliverables.</p><br><p><strong>2. Billing & Renewal:</strong> Subscriptions are billed at $49.00 USD on a recurring monthly basis. All payment transactions, applicable indirect taxes, and currency conversions are handled securely by our authorized Merchant of Record.</p><br><p><strong>3. Cancellation:</strong> You may cancel your subscription at any time without fees or penalties via the billing portal link in your transaction receipt or by contacting support at ajuna.n.michael@gmail.com.</p>"
       },
       privacy: {
         title: "Privacy Policy",
-        content: "<p><strong>1. Information Collection:</strong> We collect your email address and provided multimedia inputs solely to fulfill content deliverables and manage your subscription.</p><br><p><strong>2. Data Protection:</strong> We do not sell, rent, or distribute your email or content to any third parties. Payment details are processed entirely by our secure Merchant of Record without ever touching our servers.</p><br><p><strong>3. Inquiries:</strong> For inquiries regarding your personal data or deletion requests, contact us at ajuna.n.michael@gmail.com.</p>"
+        content: "<p><strong>1. Information Collection:</strong> We collect your email address and submitted media assets exclusively for account authentication, pipeline execution, and delivering your repurposed digital assets.</p><br><p><strong>2. Data Protection:</strong> We do not sell, rent, or distribute your email or personal data. All billing information and credit card details are handled directly by our PCI-compliant Merchant of Record without touching our application servers.</p><br><p><strong>3. Inquiries & Data Rights:</strong> For questions regarding data processing or deletion requests, contact us at ajuna.n.michael@gmail.com.</p>"
       },
       refunds: {
         title: "Refund & Cancellation Policy",
-        content: "<p><strong>1. 14-Day Satisfaction Guarantee:</strong> If you are not satisfied with the repurposed deliverables from your first episode, contact us within 14 days of your initial payment at ajuna.n.michael@gmail.com for a 100% full refund.</p><br><p><strong>2. Subscription Cancellation:</strong> You may cancel anytime before your next monthly renewal. Upon cancellation, your access remains active until the end of the paid billing cycle.</p>"
+        content: "<p><strong>1. 14-Day Satisfaction Guarantee:</strong> If the automated output from your first processed episode does not meet your editorial standards, contact ajuna.n.michael@gmail.com within 14 days of your initial purchase for a full 100% refund.</p><br><p><strong>2. Cancellation Policy:</strong> You may cancel anytime before your next billing cycle. Access remains active through the remainder of the currently paid period with no further charges.</p>"
       }
     };
 
