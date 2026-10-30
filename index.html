@@ -174,7 +174,7 @@
       </li>
     </ul>
 
-    <button id="checkout-button" class="btn">Subscribe to Founding Tier</button>
+    <a id="checkout-button" class="btn" href="https://test.checkout.dodopayments.com/buy/pdt_0NqdzqMUYh8PNbInUNU1d?quantity=1&amp;redirect_url=https://ajunamikedevs.github.io%2F">Subscribe to Founding Tier</a>
     <p class="footer-note">Payments are processed securely by Dodo Payments, our Merchant of Record.</p>
 
     <div class="legal-links">
@@ -187,17 +187,5 @@
   </div>
 
 
-  <script>
-    // Dodo Payments Payment Link URL (Set once product link is generated in Dodo dashboard)
-    const DODO_CHECKOUT_URL = ""; 
-
-    document.getElementById('checkout-button').addEventListener('click', function () {
-      if (DODO_CHECKOUT_URL && DODO_CHECKOUT_URL.trim() !== "") {
-        window.location.href = DODO_CHECKOUT_URL;
-      } else {
-        alert("Online checkout is being set up. To subscribe to the Founding Tier now, email ajuna.n.michael@gmail.com.");
-      }
-    });
-  </script>
 </body>
 </html>
