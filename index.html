@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A&M Content Engine turns long-form video and podcast episodes into LinkedIn, X, newsletter and hook content. Founding Tier: $49/month.">
-  <title>A&M Content Engine — Founding Tier</title>
+  <meta name="description" content="A&M Content Engine helps video and podcast creators turn long-form episodes into LinkedIn, X, newsletter and hook content. Founding Tier: $49/month.">
+  <title>A&amp;M Content Engine — Founding Tier</title>
   <style>
     :root {
       --bg: #0f172a;
@@ -15,177 +15,127 @@
       --button-bg: #2563eb;
       --button-hover: #1d4ed8;
       --border: #334155;
+      --body-text: #cbd5e1;
     }
-    * { 
-      box-sizing: border-box; 
-      margin: 0; 
-      padding: 0; 
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text-main); min-height: 100vh; padding: 24px; }
+    a { color: var(--accent); }
+    .site-header, main, .site-footer { width: min(100%, 960px); margin-inline: auto; }
+    .site-header { padding: 12px 0 28px; }
+    .brand { color: var(--text-main); font-weight: 700; text-decoration: none; }
+    .hero { padding: 52px 0 42px; }
+    .eyebrow, .badge { display: inline-block; color: var(--accent); background: rgba(56,189,248,.12); border-radius: 9999px; padding: 5px 11px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; }
+    h1 { font-size: clamp(2rem, 5vw, 3.25rem); line-height: 1.12; margin: 18px 0 14px; }
+    .hero p { color: var(--body-text); font-size: clamp(1rem, 2vw, 1.15rem); line-height: 1.7; max-width: 700px; }
+    .section { margin: 24px 0; padding: 30px; background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; }
+    h2 { font-size: 1.5rem; margin-bottom: 18px; }
+    h3 { font-size: 1.05rem; margin-bottom: 7px; }
+    .section-intro, .content-card p, .steps p, .faq p { color: var(--body-text); line-height: 1.65; }
+    .steps, .asset-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 20px; }
+    .content-card { border: 1px solid var(--border); background: rgba(15,23,42,.45); border-radius: 12px; padding: 18px; }
+    .step-number { color: var(--accent); font-weight: 700; font-size: .85rem; margin-bottom: 8px; }
+    .faq-list { display: grid; gap: 12px; }
+    details { border: 1px solid var(--border); background: rgba(15,23,42,.45); border-radius: 10px; padding: 16px; }
+    summary { cursor: pointer; font-weight: 650; line-height: 1.5; }
+    details p { margin-top: 10px; color: var(--body-text); line-height: 1.65; }
+    .todo { color: var(--accent); }
+    .pricing-wrap { display: flex; justify-content: center; padding: 8px 0 26px; }
+    .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; max-width: 440px; width: 100%; padding: 36px 32px; box-shadow: 0 20px 25px -5px rgba(0,0,0,.4); }
+    .card h2 { font-size: 24px; margin: 14px 0 8px; }
+    .description { color: var(--text-muted); font-size: 14px; line-height: 1.5; margin-bottom: 24px; }
+    .price-box { display: flex; align-items: baseline; gap: 6px; margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
+    .price { font-size: 40px; font-weight: 800; }
+    .period { color: var(--text-muted); font-size: 15px; }
+    .features { list-style: none; margin-bottom: 32px; display: flex; flex-direction: column; gap: 12px; }
+    .features li { font-size: 14px; color: var(--body-text); display: flex; align-items: flex-start; gap: 10px; line-height: 1.5; }
+    .check { color: var(--accent); font-weight: 800; flex-shrink: 0; }
+    .btn { width: 100%; background: var(--button-bg); color: white; border-radius: 8px; padding: 14px 20px; font-size: 15px; font-weight: 600; transition: background .15s ease-in-out; text-align: center; text-decoration: none; display: inline-block; }
+    .btn:hover, .btn:focus-visible { background: var(--button-hover); }
+    .footer-note { text-align: center; font-size: 12px; color: var(--text-muted); margin-top: 14px; line-height: 1.6; }
+    .site-footer { border-top: 1px solid var(--border); margin-top: 24px; padding: 24px 0 10px; text-align: center; color: var(--text-muted); font-size: 13px; line-height: 1.8; }
+    .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 16px; margin-top: 8px; }
+    .footer-links a { color: var(--text-muted); text-decoration: none; }
+    .footer-links a:hover, .footer-links a:focus-visible { color: var(--accent); text-decoration: underline; }
+    @media (max-width: 600px) {
+      body { padding: 16px; }
+      .hero { padding: 34px 0 24px; }
+      .section { padding: 22px 18px; }
+      .steps, .asset-grid { grid-template-columns: 1fr; }
+      .card { padding: 28px 22px; }
     }
-    body { 
-      background-color: var(--bg); 
-      color: var(--text-main); 
-      min-height: 100vh; 
-      display: flex; 
-      align-items: center; 
-      justify-content: center; 
-      padding: 24px; 
-    }
-    .card { 
-      background-color: var(--card-bg); 
-      border: 1px solid var(--border); 
-      border-radius: 16px; 
-      max-width: 440px; 
-      width: 100%; 
-      padding: 36px 32px; 
-      box-shadow: 0 20px 25px -5px rgba(0,0,0,0.4); 
-    }
-    .badge { 
-      display: inline-block; 
-      background: rgba(56, 189, 248, 0.12); 
-      color: var(--accent); 
-      font-size: 12px; 
-      font-weight: 600; 
-      text-transform: uppercase; 
-      padding: 4px 10px; 
-      border-radius: 9999px; 
-      margin-bottom: 16px; 
-    }
-    h1 { 
-      font-size: 24px; 
-      font-weight: 700; 
-      margin-bottom: 8px; 
-    }
-    .description { 
-      color: var(--text-muted); 
-      font-size: 14px; 
-      line-height: 1.5; 
-      margin-bottom: 24px; 
-    }
-    .price-box { 
-      display: flex; 
-      align-items: baseline; 
-      gap: 6px; 
-      margin-bottom: 24px; 
-      padding-bottom: 24px; 
-      border-bottom: 1px solid var(--border); 
-    }
-    .price { 
-      font-size: 40px; 
-      font-weight: 800; 
-      color: var(--text-main); 
-    }
-    .period { 
-      color: var(--text-muted); 
-      font-size: 15px; 
-    }
-    .features { 
-      list-style: none; 
-      margin-bottom: 32px; 
-      display: flex; 
-      flex-direction: column; 
-      gap: 12px; 
-    }
-    .features li { 
-      font-size: 14px; 
-      color: #cbd5e1; 
-      display: flex; 
-      align-items: center; 
-      gap: 10px; 
-    }
-    .features svg { 
-      width: 18px; 
-      height: 18px; 
-      color: var(--accent); 
-      flex-shrink: 0; 
-    }
-    .btn { 
-      width: 100%; 
-      background-color: var(--button-bg); 
-      color: white; 
-      border: none; 
-      padding: 14px 20px; 
-      border-radius: 8px; 
-      font-size: 15px; 
-      font-weight: 600; 
-      cursor: pointer; 
-      transition: 0.15s ease-in-out; 
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-    }
-    .btn:hover { 
-      background-color: var(--button-hover); 
-    }
-    .footer-note { 
-      text-align: center; 
-      font-size: 12px; 
-      color: var(--text-muted); 
-      margin-top: 14px; 
-    }
-    .operator a { color: var(--text-muted); }
-    .legal-links { 
-      display: flex; 
-      justify-content: center; 
-      gap: 12px; 
-      margin-top: 20px; 
-      font-size: 11px; 
-    }
-    .legal-links a { 
-      color: var(--text-muted); 
-      text-decoration: none; 
-      cursor: pointer; 
-    }
-    .legal-links a:hover { 
-      color: var(--accent); 
-      text-decoration: underline; 
-    }
-
   </style>
 </head>
 <body>
+  <header class="site-header">
+    <a class="brand" href="index.html">A&amp;M Content Engine</a>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <span class="eyebrow">Content repurposing for creators</span>
+      <h1 id="page-title">A&amp;M Content Engine</h1>
+      <p>For video and podcast creators, A&amp;M Content Engine turns long-form episodes into ready-to-use LinkedIn, X, newsletter and hook content.</p>
+    </section>
 
-  <div class="card">
-    <span class="badge">Founding Tier</span>
-    <h1>A&M Content Engine</h1>
-    <p class="description">AI-powered ingestion and programmatic content repurposing pipeline for video and podcast creators.</p>
+    <section class="section" aria-labelledby="how-it-works">
+      <h2 id="how-it-works">How it works</h2>
+      <p class="section-intro">Submit an episode and receive a set of standardized digital assets in your inbox within 2 hours of submission.</p>
+      <div class="steps">
+        <article class="content-card"><p class="step-number">Step 1</p><h3>Submit an episode</h3><p>Send us an eligible episode using the submission method. <span class="todo">TODO: Confirm whether submissions are made by upload, link, email, or another method.</span></p></article>
+        <article class="content-card"><p class="step-number">Step 2</p><h3>Automated processing</h3><p>The episode is processed to produce content assets for the formats listed below.</p></article>
+        <article class="content-card"><p class="step-number">Step 3</p><h3>Receive your assets</h3><p>Your assets are delivered to your inbox within 2 hours of submission.</p></article>
+        <article class="content-card"><p class="step-number">Monthly allowance</p><h3>Up to 4 episodes</h3><p>The Founding Tier includes automated ingestion of up to 4 episodes per month.</p></article>
+      </div>
+    </section>
 
-    <div class="price-box">
-      <span class="price">$49</span>
-      <span class="period">/ month</span>
-    </div>
+    <section class="section" aria-labelledby="what-you-get">
+      <h2 id="what-you-get">What you get</h2>
+      <p class="section-intro">20 standardized digital assets across four content types. Per-type quantities are not specified.</p>
+      <div class="asset-grid">
+        <article class="content-card"><h3>LinkedIn</h3><p>Content adapted for sharing with your LinkedIn audience.</p></article>
+        <article class="content-card"><h3>X</h3><p>Content adapted for sharing on X.</p></article>
+        <article class="content-card"><h3>Newsletter</h3><p>Newsletter content based on your submitted episode.</p></article>
+        <article class="content-card"><h3>Hooks</h3><p>Hooks drawn from your episode content.</p></article>
+      </div>
+    </section>
 
-    <ul class="features">
-      <li>
-        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-        Automated ingestion of up to 4 episodes / month
-      </li>
-      <li>
-        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-        20 standardized digital assets (LinkedIn, X, Newsletter, Hooks)
-      </li>
-      <li>
-        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-        Automated processing &amp; inbox delivery within 2 hours of submission
-      </li>
-      <li>
-        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-        Cancel anytime &middot; 14-day satisfaction guarantee
-      </li>
-    </ul>
+    <section class="section faq" aria-labelledby="faq-heading">
+      <h2 id="faq-heading">Frequently asked questions</h2>
+      <div class="faq-list">
+        <details><summary>What files or links can I submit?</summary><p class="todo">TODO: Accepted file formats, link types, and submission method have not yet been specified.</p></details>
+        <details><summary>What happens after I submit 4 episodes in a month?</summary><p>The Founding Tier includes up to 4 episodes per month. <span class="todo">TODO: Clarify whether additional episodes can be submitted and any applicable process or charge.</span></p></details>
+        <details><summary>How do I cancel?</summary><p>You can cancel anytime. <span class="todo">TODO: Add the specific cancellation steps or account-management method.</span></p></details>
+        <details><summary>How do refunds work?</summary><p>The plan includes a 14-day satisfaction guarantee. To request a refund, email <a href="mailto:ajuna.n.michael@gmail.com">ajuna.n.michael@gmail.com</a>. <span class="todo">TODO: Confirm any additional eligibility details or processing timeline.</span></p></details>
+        <details><summary>Who processes payments?</summary><p>Dodo Payments processes payments as our Merchant of Record.</p></details>
+      </div>
+    </section>
 
-    <a id="checkout-button" class="btn" href="https://test.checkout.dodopayments.com/buy/pdt_0NqdzqMUYh8PNbInUNU1d?quantity=1&amp;redirect_url=https://ajunamikedevs.github.io%2F">Subscribe to Founding Tier</a>
-    <p class="footer-note">Payments are processed securely by Dodo Payments, our Merchant of Record.</p>
-
-    <div class="legal-links">
-      <a href="terms.html">Terms</a> &bull;
-      <a href="privacy.html">Privacy</a> &bull;
-      <a href="refunds.html">Refund Policy</a> &bull;
-      <a href="contact.html">Contact</a>
-    </div>
-    <p class="footer-note operator">Support: <a href="mailto:ajuna.n.michael@gmail.com">ajuna.n.michael@gmail.com</a></p>
-  </div>
-
-
+    <section aria-labelledby="pricing-heading">
+      <h2 id="pricing-heading" style="text-align:center; margin: 30px 0 18px;">Founding Tier pricing</h2>
+      <div class="pricing-wrap">
+        <div class="card">
+          <span class="badge">Founding Tier</span>
+          <h2>A&amp;M Content Engine</h2>
+          <p class="description">AI-powered ingestion and programmatic content repurposing for video and podcast creators.</p>
+          <div class="price-box"><span class="price">$49</span><span class="period">/ month</span></div>
+          <ul class="features">
+            <li><span class="check" aria-hidden="true">✓</span><span>Automated ingestion of up to 4 episodes / month</span></li>
+            <li><span class="check" aria-hidden="true">✓</span><span>20 standardized digital assets (LinkedIn, X, Newsletter, Hooks)</span></li>
+            <li><span class="check" aria-hidden="true">✓</span><span>Automated processing &amp; inbox delivery within 2 hours of submission</span></li>
+            <li><span class="check" aria-hidden="true">✓</span><span>Cancel anytime &middot; 14-day satisfaction guarantee</span></li>
+          </ul>
+          <!-- TODO: This checkout button currently points to a test-mode link; replace it with the live Dodo Payments link. -->
+          <a id="checkout-button" class="btn" href="https://test.checkout.dodopayments.com/buy/pdt_0NqdzqMUYh8PNbInUNU1d?quantity=1&amp;redirect_url=https://ajunamikedevs.github.io%2F">Subscribe to Founding Tier</a>
+          <p class="footer-note">Payments are processed securely by Dodo Payments, our Merchant of Record.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p><strong>A&amp;M Content Engine</strong> &middot; Support: <a href="mailto:ajuna.n.michael@gmail.com">ajuna.n.michael@gmail.com</a></p>
+    <nav class="footer-links" aria-label="Legal and support links">
+      <a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="refunds.html">Refund Policy</a><a href="contact.html">Contact</a>
+    </nav>
+  </footer>
 </body>
 </html>
